@@ -9,10 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var calcButton: UIButton!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var calcButton: UIButton!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

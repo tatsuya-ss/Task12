@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet private weak var calcButton: UIButton!
     @IBOutlet private weak var resultLabel: UILabel!
     
+    private let userDefaultZeiKey = "zei"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let zei = UserDefaults.standard.string(forKey: "zei"){
+        if let zei = UserDefaults.standard.string(forKey: userDefaultZeiKey){
             self.textField2.text = zei
         }
     }
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
         let num2 = Double(textField2.text!) ?? 0
         let zeiritu = 1 + num2 / 100
        
-        UserDefaults.standard.set(textField2.text, forKey: "zei")
+        UserDefaults.standard.set(textField2.text, forKey: userDefaultZeiKey)
         
         resultLabel.text = String(Int(num1 * zeiritu))
     }
